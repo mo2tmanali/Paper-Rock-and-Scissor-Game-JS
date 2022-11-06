@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Page Title</title>
+
+</head>
+<body>
+    <!-- <select name="Quantity" id="selection"> 
+        <option value="Value1">1</option> 
+        <option value="Value2">2</option> 
+        <option value="Value3">3</option> 
+        <option value="Value4">4</option> 
+    </select>
+    <input type="string" name="Input1"/></input> -->
+    <script>
+        let person = prompt("Rock, Paper or Scissor", "Rock");
+        const arr = ['rock','scissors','paper'];
+        function randomChoice(arr) {
+            return arr[Math.floor(arr.length * Math.random())];
+        }
+        let computerChoice = randomChoice(arr).toUpperCase()
+        let personChoice = person.toUpperCase()
+
+        if (personChoice != null) {
+            if (computerChoice === personChoice ){
+                console.log("EVEN!")
+                console.log("Computer Chose: ",computerChoice)
+                console.log("You Chose",personChoice)
+            }
+            else if(computerChoice === "ROCK" && personChoice ==="PAPER"){
+                console.log("YOU WIN!")
+                console.log("Computer Chose: ",computerChoice)
+                console.log("You Chose",personChoice)
+            } 
+            else if(computerChoice === "ROCK" && personChoice ==="SCISSOR"){
+                console.log("LOSER!")
+                console.log("Computer Chose: ",computerChoice)
+                console.log("You Chose",personChoice)
+            }
+            else if(computerChoice === "SCISSOR" && personChoice ==="PAPER"){
+                console.log("LOSER!")
+                console.log("Computer Chose: ",computerChoice)
+                console.log("You Chose",personChoice)
+            }
+            else if(computerChoice === "SCISSOR" && personChoice ==="ROCK"){
+                console.log("YOU WON!")
+                console.log("Computer Chose: ",computerChoice)
+                console.log("You Chose",personChoice)
+            }
+            else if(computerChoice === "PAPER" && personChoice ==="SCISSOR"){
+                console.log("WINNER!")
+                console.log("Computer Chose: ",computerChoice)
+                console.log("You Chose",personChoice)
+            }
+            else if(computerChoice === "PAPER" && personChoice ==="ROCK"){
+                console.log(" L!")
+                console.log("Computer Chose: ",computerChoice)
+                console.log("You Chose",personChoice)
+            }    
+        } 
+
+
+
+        
+        
+
+    </script>
+</body>
+</html>
